@@ -1,0 +1,7 @@
+tasks:
+  - name: Start Jenkins
+    init: wget https://get.jenkins.io/war-stable/2.440.1/jenkins.war
+    command: java -jar jenkins.war --httpPort=8080
+ports:
+  - port: 8080
+    onOpen: open-preview
